@@ -1,3 +1,5 @@
+// Geoff Waddington added a comment on Jan 25, 2013 at 14:10 AST (gmt-4)
+
 /*
 ** reaper_csurf
 ** Copyright (C) 2006-2008 Cockos Incorporated

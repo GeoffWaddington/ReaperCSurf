@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3bef5274-5f0c-422c-8d11-cb57efc83b39}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\csurfs">
+      <UniqueIdentifier>{16ce54dd-f30d-4b80-af79-b2bd8cdf1e07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{526ece8f-a684-446a-abaf-6796fdb29f3a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d0386b40-5f28-41fa-b022-1ea5e061925a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="csurf_01X.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_alphatrack.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_babyhui.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_bcf2000.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_faderport.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_mcu.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_osc.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_tranzport.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
+    <ClCompile Include="csurf_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="osc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="osc_message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="csurf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="osc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\reaper_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
