@@ -421,6 +421,7 @@ public:
     descspace.Set("EuCon");
     return descspace.Get();     
   }
+
   const char *GetConfigString() // string of configuration data
   {
     sprintf(configtmp,"0 0 %d %d",m_midi_in_dev,m_midi_out_dev);      
@@ -624,55 +625,27 @@ public:
   }
   void SetSurfaceMute(MediaTrack *trackid, bool mute) 
   { 
-    FIXID(id)
-    if (m_midiout && !id) m_midiout->Send(0x90,0x10,mute?0x7f:0,-1);
   }
   void SetSurfaceSelected(MediaTrack *trackid, bool selected) 
   {
-    // not used
   }
   void SetSurfaceSolo(MediaTrack *trackid, bool solo) 
   { 
-    FIXID(id)
-    if (m_midiout)
-    {
-      if (!oid) m_midiout->Send(0x90, 0x73,(m_tranz_anysolo_poop=!!solo)?0x7f:0,-1);
-      
-      if (!id) m_midiout->Send(0x90,0x08,solo?0x7f:0,-1);
-    }
   }
   void SetSurfaceRecArm(MediaTrack *trackid, bool recarm) 
   { 
-    FIXID(id)
-    if (m_midiout)
-    {
-      if (!id)
-        m_midiout->Send(0x90,0x00,recarm?0x7f:0,-1);
-
-    }
   }
   void SetPlayState(bool play, bool pause, bool rec) 
   { 
-    if (m_midiout) m_midiout->Send(0x90,0x5f,rec ? 0x7f:0,-1);
   }
   void SetRepeatState(bool rep) 
   { 
-    if (m_midiout) m_midiout->Send(0x90,0x56,rep ? 0x7f:0,-1);
   }
 
   void SetTrackTitle(MediaTrack *trackid, const char *title) { }
 
   bool GetTouchState(MediaTrack *trackid, int isPan) 
   { 
-    FIXID(id)
-    if (!id)
-    {
-      DWORD lt=m_vol_lasttouch;
-      if (isPan==1) lt=m_pan_lasttouch;
-      DWORD now=timeGetTime();
-      if ((now<lt+3000 && now >= lt-1000)) // fake touch, go for 3s after last movement
-        return true;
-    }
     return false;
   }
 
@@ -683,12 +656,6 @@ public:
   }
   void OnTrackSelection(MediaTrack *trackid) 
   { 
-    int newpos=CSurf_TrackToID(trackid,g_csurf_mcpmode);
-    if (newpos>=0 && newpos != m_bank_offset)
-    {
-      AdjustBankOffset(newpos-m_bank_offset,false);
-      TrackList_UpdateAllExternalSurfaces();
-    }
   }
   
   bool IsKeyDown(int key) 
