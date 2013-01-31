@@ -13,6 +13,7 @@
 
 extern reaper_csurf_reg_t 
   csurf_bcf_reg,
+  csurf_eucon_reg,
   csurf_faderport_reg,
   csurf_hui_reg,
   csurf_mcu_reg,
@@ -440,6 +441,7 @@ REAPER_PLUGIN_DLL_EXPORT int REAPER_PLUGIN_ENTRYPOINT(REAPER_PLUGIN_HINSTANCE hI
 
 
   rec->Register("csurf",&csurf_bcf_reg);
+  rec->Register("csurf",&csurf_eucon_reg);  
   rec->Register("csurf",&csurf_faderport_reg);
   rec->Register("csurf",&csurf_hui_reg);
   rec->Register("csurf",&csurf_mcu_reg);

@@ -115,3 +115,5 @@ jmde/csurf/Release/res.res
 jmde/Debug/Plugins/reaper_csurf.dll
 jmde/Debug/Plugins/reaper_csurf.ilk
 jmde/Release/Plugins/reaper_csurf.dll
+jmde/csurf/reaper_csurf.suo
+jmde/csurf/Debug/csurf_eucon.obj

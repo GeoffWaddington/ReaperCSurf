@@ -51,6 +51,9 @@
     <ClCompile Include="osc_message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="csurf_eucon.cpp">
+      <Filter>Source Files\csurfs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="csurf.h">
